@@ -63,11 +63,11 @@ def test(vocab, dataloader, model):
 
 def main():
     # 加载词汇表
-    with open('./data/vocab.pkl', 'rb') as f:
+    with open(config.VOCAB_PATH, 'rb') as f:
         vocab = pickle.load(f)
 
     # 加载测试数据
-    with open('./data/data.pkl', 'rb') as f:
+    with open(config.DATA_PATH, 'rb') as f:
         data = pickle.load(f)
 
     # 创建测试数据集和数据加载器
